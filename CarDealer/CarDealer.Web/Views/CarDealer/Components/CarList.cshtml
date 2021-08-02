@@ -1,0 +1,18 @@
+﻿@model CarDealer.Web.Model.CarList
+
+@using Sitecore.Mvc
+<div>
+    @{
+        foreach (var item in @Model.Children)
+        {
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@item.Image.Src" alt="@item.Model" style="max-width: 200px">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Model</h5>
+                    <p class="card-text">@item.Description</p>
+                    <a href="@item.Url" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        }
+    }
+</div>

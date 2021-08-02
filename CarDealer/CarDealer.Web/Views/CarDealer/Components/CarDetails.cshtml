@@ -1,0 +1,11 @@
+﻿@model CarDealer.Web.Model.Car
+
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Mvc
+<div>
+    <h4>@Html.Glass().Editable(x => x.Model)</h4>
+    <p>@Html.Glass().RenderImage(x => x.Image, isEditable:true)</p>
+    <p>@Html.Glass().Editable(x => x.Description)</p>
+
+
+</div>
